@@ -1,0 +1,111 @@
+// $blue:    #0d6efd !default;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #d63384 !default;
+// $red:     #dc3545 !default;
+// $orange:  #fd7e14 !default;
+// $yellow:  #ffc107 !default;
+// $green:   #198754 !default;
+// $teal:    #20c997 !default;
+// $cyan:    #0dcaf0 !default;
+
+// $naranjo_marca: #E6500A !default;
+// $azul-marca: #0064A0 !default;
+// $gris-marca: #737373 !default;
+
+// $gris-texto-iconos: #333333 !default;
+// $gris-texto-iconos2: #706F6F !default;
+// $gris-iconos: #BBBBBB !default;
+// $gris-borde-caja: #DDDDDD !default;
+// $gris-fondo: #EEEEEE !default;
+// $gris-fondo-caja: #F5F5F5 !default; 
+
+// $rojo-secundario-botones-textos: #E22C2C !default;
+// $azul-secundario-footer-menu: #002C48 !default;
+// $azul-secundario-top: #002C48 !default;
+
+// $azul-secundario-link-iconos: #0F69B4 !default;
+// $verde-secundario-botones-iconos: #00B050 !default;
+// $amarillo-secundario-botones-textos: #FFC000 !default;
+// $purpura-secundario-botones-iconos-fondos: #723E72 !default;
+// $cyan-secundario-botones-iconos: #6DC1D5 !default;
+ 
+
+// $primary: $azul-marca !default;
+// $secondary: $gris-marca !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:         $naranjo_marca !default;
+// $danger:        $rojo-secundario-botones-textos !default;
+// $light: #dee2e6 !default;; // color de los textos del cuerpo
+// $dark: $gris-texto-iconos !default;
+// //$body_color: tint-color($cyan, 40%) !default; //con esto se define que el color de texto por default será el gris claro
+  
+// $theme-colors: (
+//   "primary":    $primary,
+//   "secondary":  $secondary,
+//   "success":    $success,
+//   "info":       $info,
+//   "warning":    $warning,
+//   "danger":     $danger,
+//   "light":      $light,
+//   "dark":       $dark
+// ) !default;
+
+// @use "bootstrap/scss/bootstrap" as *;
+
+// 1. DEFINICIÓN DE VARIABLES DE MARCA
+// Estas variables son específicas de tu proyecto y deben estar definidas antes de @use.
+$naranjo_marca: #E6500A;
+$azul-marca: #0064A0;
+$gris-marca: #737373;
+
+$gris-texto-iconos: #333333;
+$gris-texto-iconos2: #706F6F;
+$gris-iconos: #BBBBBB;
+$gris-borde-caja: #DDDDDD;
+$gris-fondo: #EEEEEE;
+$gris-fondo-caja: #F5F5F5; 
+
+$rojo-secundario-botones-textos: #E22C2C;
+$azul-secundario-footer-menu: #002C48;
+$azul-secundario-top: #002C48;
+
+$azul-secundario-link-iconos: #0F69B4;
+$verde-secundario-botones-iconos: #00B050;
+$amarillo-secundario-botones-textos: #FFC000;
+$purpura-secundario-botones-iconos-fondos: #723E72;
+$cyan-secundario-botones-iconos: #6DC1D5;
+
+// 2. IMPORTACIÓN Y CONFIGURACIÓN DE BOOTSTRAP
+// Usamos @use con with (...) para redefinir las variables internas de Bootstrap ($primary, $blue, etc.).
+// Esto evita la duplicidad y el error de variable indefinida.
+
+@use "bootstrap/scss/bootstrap" as * with (
+    // Redefinición de los colores base de Bootstrap (si lo necesitas)
+    $blue:      #0d6efd,
+    $indigo:    #6610f2,
+    $purple:    #6f42c1,
+    $pink:      #d63384,
+    $red:       #dc3545,
+    $orange:    #fd7e14,
+    $yellow:    #ffc107,
+    $green:     #198754,
+    $teal:      #20c997,
+    $cyan:      #0dcaf0,
+
+    // Redefinición de las variables de TEMA, usando las variables de marca
+    // Al redefinir estas variables aquí, Bootstrap automáticamente construye $theme-colors
+    // con estos valores, ¡sin que tengamos que definir el mapa manualmente!
+    $primary:    $azul-marca, 
+    $secondary:  $gris-marca,
+    $success:    $verde-secundario-botones-iconos,
+    $info:       $cyan-secundario-botones-iconos,
+    $warning:    $naranjo_marca,
+    $danger:     $rojo-secundario-botones-textos,
+    $light:      #dee2e6,
+    $dark:       $gris-texto-iconos
+);
+
+// NOTA: Con esta configuración, el mapa $theme-colors ya está correctamente generado
+// con tus colores personalizados. No se necesita más código.

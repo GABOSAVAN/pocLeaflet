@@ -1,10 +1,10 @@
 <script setup>
-import Test from './components/Test.vue';
+import Enter from './components/Enter.vue';
 
 </script>
 
 <template>
-  <Test/>
+  <Enter/>
 </template>
 
 
