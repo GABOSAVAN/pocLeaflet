@@ -3,11 +3,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/',
-    redirect: '/enter'
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
   },
   {
-    path: '/home',
+    path: '/',
     name: 'Enter',
     component: () => import('../views/Init.vue')
   },
