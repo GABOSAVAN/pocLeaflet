@@ -15,6 +15,7 @@
     "bootstrap": "^5.3.8",
     "bootstrap-vue-next": "^0.40.7",
     "leaflet": "^1.9.4",
+    "tesseract.js": "^6.0.1",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
   },

@@ -1,9 +1,9 @@
 <script setup>
-    
+    import Ocr from '@/components/Ocr.vue';
 </script>
 
 <template>
     <div>
-        <h1>Ocr View</h1>
+        <Ocr/>
     </div>
 </template>

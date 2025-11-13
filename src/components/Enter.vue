@@ -11,8 +11,6 @@ import {
 const isCollapsedOne = ref(false);
 const isCollapsedInner = ref(false);
 
-const textoInput = ref("");
-
 const text = ref("");
 
 const toggleCollapseOne = () => {
@@ -25,7 +23,6 @@ const toggleCollapseInner = () => {
 
 const clean = () => {
     text.value = "";
-    textoInput.value = "";
 }
 
 </script>
@@ -44,7 +41,7 @@ const clean = () => {
         </div>
     </div>
 
-    <div class="d-flex justify-content-center mt-5" @click="clean">
+    <div v-if="text.length > 0" class="d-flex justify-content-center mt-5" @click="clean">
       <b-button>Limpiar</b-button>
     </div>
     
