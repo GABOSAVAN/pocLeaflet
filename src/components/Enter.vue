@@ -37,37 +37,16 @@ const clean = () => {
         <BFormInput
         v-model="text"
         class="form-control mt-lg-5"
-        placeholder="Enter your name"
+        placeholder="Escribe cualquier wea..."
         />
-        <h1 class="mt-2">{{ text }}</h1>
+        <div style="height: 100px;">
+          <h1 class="mt-2">{{ text }}</h1>
+        </div>
     </div>
 
     <div class="d-flex justify-content-center mt-5" @click="clean">
       <b-button>Limpiar</b-button>
     </div>
-
-    <BButton @click="toggleCollapseOne" variant="primary"
-      >Toggle Collapse</BButton
-    >
-
-    <BCollapse id="collapse-1" v-model="isCollapsedOne">
-      <BCard class="mt-4">
-        <p class="card-text">Collapse contents Here</p>
-        <BButton @click="toggleCollapseInner" size="sm"
-          >Toggle Inner Collapse</BButton
-        >
-        <BCollapse id="collapse-1-inner" v-model="isCollapsedInner">
-          <BCard class="mt-4">Hello!</BCard>
-        </BCollapse>
-      </BCard>
-    </BCollapse>
+    
   </div>
 </template>
-
-<style scoped>
-.box {
-  background-color: aqua;
-  width: 200px;
-  height: 150px;
-}
-</style>
