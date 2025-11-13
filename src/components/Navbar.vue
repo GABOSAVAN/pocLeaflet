@@ -29,6 +29,9 @@ const toggle = () => {
       <div  class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
+            <router-link class="nav-link text-white" active-class="active" to="/home">Home</router-link>
+          </li>
+          <li class="nav-item">
             <router-link class="nav-link text-white" active-class="active" to="/mapa">Mapa</router-link>
           </li>
           <li class="nav-item">

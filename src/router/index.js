@@ -4,7 +4,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    redirect: '/mapa'
+    redirect: '/enter'
+  },
+  {
+    path: '/home',
+    name: 'Enter',
+    component: () => import('../views/Init.vue')
   },
   {
     path: '/mapa',

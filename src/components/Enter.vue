@@ -23,10 +23,6 @@ const toggleCollapseInner = () => {
   isCollapsedInner.value = !isCollapsedInner.value;
 };
 
-// const hello = () => {
-//     alert("ya me acorde!!!...")
-// }
-
 const clean = () => {
     text.value = "";
     textoInput.value = "";
@@ -35,21 +31,12 @@ const clean = () => {
 </script>
 
 <template>
-  <div>
-    <div class="box">
-      <input
-        id="input-texto"
-        v-model="textoInput"
-        type="text"
-        placeholder="escribe..."
-      />
-      <h1>{{ textoInput }}</h1>
-    </div>
+  <div>    
 
     <div>
         <BFormInput
         v-model="text"
-        class="form-control"
+        class="form-control mt-lg-5"
         placeholder="Enter your name"
         />
         <h1 class="mt-2">{{ text }}</h1>
