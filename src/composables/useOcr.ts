@@ -13,7 +13,7 @@ export function useOcr() {
     if (/android/.test(ua)) deviceType.value = 'android'
     else if (/iphone|ipad|ipod/.test(ua)) deviceType.value = 'ios'
     else deviceType.value = 'desktop'
-  }
+  }  
 
   const checkCameraAvailability = async () => {
     try {
