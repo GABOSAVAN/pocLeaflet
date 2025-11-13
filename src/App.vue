@@ -1,10 +1,9 @@
 <script setup>
-import Enter from './components/Enter.vue';
-
+import DefaultLayout from './layouts/DefaultLayout.vue';
 </script>
 
 <template>
-  <Enter/>
+  <DefaultLayout />
 </template>
 
 
