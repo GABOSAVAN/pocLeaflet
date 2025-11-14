@@ -1,30 +1,3 @@
-<template>
-  <div class="ocr-container">
-    <h2>📷 Escaneo OCR</h2>
-
-    <video
-      v-if="!ocrResult"
-      ref="videoRef"
-      class="video-preview"
-      autoplay
-      playsinline
-    ></video>
-
-    <div v-if="processing" class="processing-message">
-      Procesando imagen...
-    </div>
-
-    <div v-if="ocrResult" class="ocr-result">
-      <h4>Texto detectado:</h4>
-      <pre>{{ ocrResult }}</pre>
-    </div>
-
-    <button class="scan-button" @click="iniciarEscaneo">
-      Escanear
-    </button>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useOcr } from '../composables/useOcr'
@@ -62,6 +35,33 @@ onMounted(() => {
   iniciarEscaneo()
 })
 </script>
+
+<template>
+  <div class="ocr-container">
+    <h2>📷 Escaneo OCR</h2>
+
+    <video
+      v-if="!ocrResult"
+      ref="videoRef"
+      class="video-preview"
+      autoplay
+      playsinline
+    ></video>
+
+    <div v-if="processing" class="processing-message">
+      Procesando imagen...
+    </div>
+
+    <div v-if="ocrResult" class="ocr-result">
+      <h4>Texto detectado:</h4>
+      <pre>{{ ocrResult }}</pre>
+    </div>
+
+    <button class="scan-button" @click="iniciarEscaneo">
+      Escanear
+    </button>
+  </div>
+</template>
 
 <style scoped>
 .ocr-container {

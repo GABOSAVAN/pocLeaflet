@@ -1,9 +1,11 @@
 <script setup>
+import Pdf from '@/components/Pdf.vue';
+
     
 </script>
 
 <template>
     <div>
-        <h1>PDF View</h1>
+        <Pdf/>
     </div>
 </template>

@@ -12,9 +12,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@zxing/browser": "^0.1.5",
     "bootstrap": "^5.3.8",
     "bootstrap-vue-next": "^0.40.7",
     "leaflet": "^1.9.4",
+    "pdf417-generator": "^1.0.5",
     "tesseract.js": "^6.0.1",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3"
