@@ -42,6 +42,7 @@
         <p>{{ locationDetails }}</p>
         <small>Dispositivo: {{ deviceType }}</small>
       </div>
+      <span>Coordenadas: {{ coords }}</span>
     </div>
   </div>
 </template>
