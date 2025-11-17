@@ -24,9 +24,15 @@ const resetScanner = () => {
   }
 };
 
-const convertToPdf417 = () => {
-  pdf417Image.value = encodeTextToPdf417(inputText.value);
+// const convertToPdf417 = () => {
+//   pdf417Image.value = encodeTextToPdf417(inputText.value);
+// };
+
+
+const convertToPdf417 = async () => {
+  pdf417Image.value = await encodeTextToPdf417(inputText.value);
 };
+
 
 const switchMode = (newMode: 'encode' | 'decode') => {
   mode.value = newMode;

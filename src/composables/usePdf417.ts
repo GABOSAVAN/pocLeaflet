@@ -1,7 +1,7 @@
 
-// @ts-ignore
 import { BrowserMultiFormatReader } from '@zxing/browser';
-import * as PDF417 from 'pdf417-generator';
+import PDF417 from 'pdf417-generator';
+
 
 export function usePdf417() {
   const reader = new BrowserMultiFormatReader();
@@ -66,12 +66,21 @@ export function usePdf417() {
     }
   };
 
-  const encodeTextToPdf417 = (text: string): string => {
-    const canvas = document.createElement('canvas');
-    const code = PDF417.encode(text);
-    PDF417.draw(code, canvas);
-    return canvas.toDataURL();
-  };
+  // const encodeTextToPdf417 = (text: string): string => {
+  //   const canvas = document.createElement('canvas');
+  //   const code = PDF417.encode(text);    
+  //   PDF417.draw(code, canvas);
+  //   return canvas.toDataURL();
+  // };
+  
+const encodeTextToPdf417 = async (text: string): Promise<string> => {
+  const PDF417 = await import('pdf417-generator'); // ✅ Importación dinámica
+  const canvas = document.createElement('canvas');
+  const code = PDF417.default.encode(text);        // ✅ Accede a la función desde default
+  PDF417.default.draw(code, canvas);
+  return canvas.toDataURL();
+}
+
 
   return {
     startCamera,
